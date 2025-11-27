@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Base Colors */
+    --background: 48 20% 98%;
+    --foreground: 140 40% 15%;
+
+    /* Card */
+    --card: 0 0% 100%;
+    --card-foreground: 140 40% 15%;
+
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 140 40% 15%;
+
+    /* Primary - Fresh Green (Growth) */
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 142 76% 45%;
+
+    /* Secondary - Earth Brown */
+    --secondary: 30 35% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Accent - Sky Blue */
+    --accent: 200 80% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Harvest - Warm Amber */
+    --harvest: 40 95% 55%;
+    --harvest-foreground: 140 40% 15%;
+
+    /* Muted */
+    --muted: 48 20% 95%;
+    --muted-foreground: 140 20% 40%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Border & Input */
+    --border: 142 30% 85%;
+    --input: 142 30% 90%;
+    --ring: 142 76% 36%;
+
+    /* Radius */
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 45%));
+    --gradient-earth: linear-gradient(180deg, hsl(48 20% 98%), hsl(30 20% 92%));
+    --gradient-sky: linear-gradient(135deg, hsl(200 80% 55%), hsl(210 85% 65%));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(142 76% 36% / 0.15);
+    --shadow-glow: 0 0 30px hsl(142 76% 45% / 0.3);
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Sidebar */
+    --sidebar-background: 48 20% 98%;
+    --sidebar-foreground: 140 40% 15%;
+    --sidebar-primary: 142 76% 36%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 142 30% 95%;
+    --sidebar-accent-foreground: 140 40% 15%;
+    --sidebar-border: 142 30% 85%;
+    --sidebar-ring: 142 76% 36%;
+  }
+
+  .dark {
+    /* Base Colors */
+    --background: 140 30% 8%;
+    --foreground: 48 20% 95%;
+
+    /* Card */
+    --card: 140 25% 12%;
+    --card-foreground: 48 20% 95%;
+
+    /* Popover */
+    --popover: 140 25% 12%;
+    --popover-foreground: 48 20% 95%;
+
+    /* Primary */
+    --primary: 142 70% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 142 70% 55%;
+
+    /* Secondary */
+    --secondary: 30 30% 35%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Accent */
+    --accent: 200 75% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Harvest */
+    --harvest: 40 90% 50%;
+    --harvest-foreground: 140 40% 15%;
+
+    /* Muted */
+    --muted: 140 25% 15%;
+    --muted-foreground: 48 15% 65%;
+
+    /* Destructive */
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Border & Input */
+    --border: 140 25% 20%;
+    --input: 140 25% 18%;
+    --ring: 142 70% 45%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(142 70% 35%), hsl(142 70% 45%));
+    --gradient-earth: linear-gradient(180deg, hsl(140 30% 8%), hsl(140 25% 12%));
+    --gradient-sky: linear-gradient(135deg, hsl(200 75% 45%), hsl(210 80% 55%));
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(142 70% 45% / 0.25);
+    --shadow-glow: 0 0 30px hsl(142 70% 55% / 0.4);
+
+    /* Sidebar */
+    --sidebar-background: 140 30% 8%;
+    --sidebar-foreground: 48 20% 95%;
+    --sidebar-primary: 142 70% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 140 25% 15%;
+    --sidebar-accent-foreground: 48 20% 95%;
+    --sidebar-border: 140 25% 20%;
+    --sidebar-ring: 142 70% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
